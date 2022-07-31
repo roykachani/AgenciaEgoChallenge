@@ -1,0 +1,27 @@
+.higthLights_container {
+  margin-top: 65px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.higthLights_box {
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inverter {
+  flex-direction: row-reverse;
+}
+
+.higthLights_info {
+  width: 385px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

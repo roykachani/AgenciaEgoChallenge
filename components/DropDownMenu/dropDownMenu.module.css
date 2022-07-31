@@ -1,0 +1,73 @@
+.dropDownMenu_layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #505050b6;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.menu_container {
+  padding-top: 22px;
+  width: 390px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_content {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.close_menu {
+  width: 338px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 11px;
+}
+.ul_list_menu {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 13px;
+}
+.text_menu {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: -0.1px;
+  color: #000000;
+  list-style: none;
+}
+.menu_hr {
+  border: 1px solid #e9e9e9;
+  width: 338px;
+  margin: 31px 0;
+}
+
+.span_nav {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #191919;
+}
+.about_links {
+  width: 100%;
+  min-height: 400px;
+  margin: 31px 0;
+  padding: 31px 0;
+  background: #efeeef;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,113 @@
+.filters_main_container {
+  position: relative;
+  margin: 70px 0;
+  width: 1141px;
+  height: 41px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 10px 0;
+}
+
+.filter_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.filters_titles {
+  color: #373737;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.08px;
+  width: 80px;
+  margin-right: 45px;
+}
+
+.filter_row {
+  color: #373737;
+  display: flex;
+  align-items: center;
+  gap: 39px;
+}
+
+.filter_btn {
+  cursor: pointer;
+  padding: 8px 19px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  border: none;
+  background: inherit;
+}
+
+.filter_selected,
+.filter_btn:hover {
+  background: #f7f7f7;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+}
+
+.sort_container {
+  max-width: 300px;
+  width: 180px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.08px;
+  display: flex;
+  align-items: center;
+}
+
+.sort_input {
+  cursor: pointer;
+  color: #373737;
+  background: initial;
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.sort_options {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 170px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.sort_list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  color: #191919;
+  line-height: 35px;
+  letter-spacing: -0.1px;
+  list-style: none;
+}
+.sort_list_item {
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d8d8d8;
+}
+.sort_list_item:hover {
+  background: #f7f7f7;
+}
