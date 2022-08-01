@@ -46,7 +46,7 @@ export default function Home({ models }) {
   return (
     <>
       <Head>
-        <title>AGENCIA EGO CHALLENGE</title>
+        <title>Agencia Ego Challenge</title>
         <meta name="description" content="challenge para Agencia Ego" />
       </Head>
 
@@ -54,7 +54,7 @@ export default function Home({ models }) {
         <header className={styles.header_container}>
           <Navbar />
         </header>
-        <main>
+        <main className={styles.main_section}>
           <div className={styles.main_title}>
             <h1 className={styles.title_h1}>Descubrí todos los modelos</h1>
           </div>
@@ -69,6 +69,7 @@ export default function Home({ models }) {
             <CarModels filterModels={filterModels} />
           </div>
         </main>
+        <footer className={styles.footer} />
       </div>
     </>
   );
