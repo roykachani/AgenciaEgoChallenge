@@ -21,7 +21,7 @@ const CarHighLights = ({ model }) => {
                 <Image
                   src={higth.image}
                   alt={higth.title}
-                  width={667}
+                  width={550}
                   height={314}
                   objectFit="contain"
                   priority={true}
