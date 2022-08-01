@@ -34,6 +34,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 11px;
+  cursor: pointer;
 }
 .ul_list_menu {
   margin: 0;
@@ -50,6 +51,8 @@
   letter-spacing: -0.1px;
   color: #000000;
   list-style: none;
+  cursor: pointer;
+  user-select: none;
 }
 .menu_hr {
   border: 1px solid #e9e9e9;
