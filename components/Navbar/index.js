@@ -3,10 +3,10 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 import { MenuIcon } from '../Icons/menuIcon.js';
+import DropDownMenu from '../DropDownMenu/index.js';
 import logo from '../../public/assets/logo.svg';
 
 import styles from './nav.module.css';
-import DropDownMenu from '../DropDownMenu/index.js';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +23,8 @@ const Navbar = () => {
           <Image
             src={logo}
             alt="Logo Agencia Ego"
+            width={38}
+            height={40}
             className={styles.logo_img}
             onClick={() => router.push('/')}
             priority={true}
