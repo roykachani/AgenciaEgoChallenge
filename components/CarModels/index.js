@@ -6,6 +6,13 @@ import styles from './CarsModels.module.css';
 const CarModels = ({ filterModels }) => {
   const router = useRouter();
 
+  const convertCurrency = (value) => {
+    return Intl.NumberFormat('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+    }).format(value);
+  };
+
   return (
     <div className={styles.models_container}>
       {filterModels.map((model) => (
@@ -17,7 +24,7 @@ const CarModels = ({ filterModels }) => {
           <h2 className={styles.model_title}>{model.name}</h2>
           <div className={styles.model_box_info}>
             <span className={styles.text_info}>
-              {model.year} | {model.price}
+              {model.year} | {convertCurrency(model.price)}
             </span>
           </div>
           <Image
