@@ -13,3 +13,46 @@ a {
   color: #191919;
   text-decoration: none;
 }
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  background: #c5c5c5 !important;
+  opacity: 0.5 !important;
+  margin: 0 10px !important;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  width: 39px !important;
+  background: #4a4a4a !important;
+  border-radius: 4px !important;
+  opacity: 0.5 !important;
+  -webkit-border-radius: 4px!;
+  -moz-border-radius: 4px!;
+  -ms-border-radius: 4px!;
+  -o-border-radius: 4px!;
+}
+
+.swiper-button-prev {
+  color: #000 !important;
+}
+.swiper-button-next {
+  color: #000 !important;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.5 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
