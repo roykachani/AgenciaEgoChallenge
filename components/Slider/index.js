@@ -14,6 +14,12 @@ const Slider = ({ model }) => {
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={10}
         slidesPerView={1.4}
+        breakpoints={{
+          768: {
+            slidesPerView: 2.1,
+            spaceBetween: 30,
+          },
+        }}
         centeredSlides
         loop
         autoplay={{
