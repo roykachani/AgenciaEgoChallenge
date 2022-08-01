@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react';
-import Image from 'next/image';
 import Head from 'next/head';
 
 import { getAll } from '../../services/api';
