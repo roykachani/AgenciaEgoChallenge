@@ -23,6 +23,7 @@ export default function FichaTecnica({ model }) {
           <Slider model={model} />
           <CarHighLights model={model} />
         </main>
+        <footer className={styles.footer} />
       </div>
     </>
   );
