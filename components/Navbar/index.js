@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { MenuIcon } from '../Icons/menuIcon.js';
 import DropDownMenu from '../DropDownMenu/index.js';
-import logo from '../../public/assets/logo.svg';
+import logo from '../../public/assets/Logo.svg';
 
 import styles from './nav.module.css';
 
