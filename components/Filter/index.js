@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-import styles from './filter.module.css';
 import { SORT } from '../../utils/constants';
+import arrow from '../../public/assets/arrow.svg';
+import styles from './filter.module.css';
 
 const Filter = ({ models, selectSort, selectFilter, sort, filter }) => {
   const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const router = useRouter();
 
@@ -14,6 +17,9 @@ const Filter = ({ models, selectSort, selectFilter, sort, filter }) => {
 
   const openSort = () => {
     setOpen(!open);
+  };
+  const openfilter = () => {
+    setIsOpen(!isOpen);
   };
 
   const handleSort = (type) => {
@@ -53,7 +59,36 @@ const Filter = ({ models, selectSort, selectFilter, sort, filter }) => {
     <>
       <div className={styles.filters_main_container}>
         <div className={styles.filter_container}>
-          <p className={styles.filters_titles}>Filtrar por</p>
+          <p className={`${styles.filters_titles} ${styles.filter_none}`}>
+            Filtrar por
+          </p>
+
+          {/* title filter mobile */}
+          <div
+            onClick={openfilter}
+            className={`${styles.filter_container} ${styles.filter_list_none}`}
+          >
+            <p
+              className={`${styles.filters_titles} ${styles.filter_list_none}`}
+              onClick={openfilter}
+            >
+              Filtrar por
+            </p>
+            <Image
+              src={arrow}
+              alt="arrow"
+              width={8}
+              height={8}
+              onClick={openfilter}
+              className={
+                !!isOpen
+                  ? `${styles.arrow} ${styles.invert_arrow}`
+                  : styles.arrow
+              }
+            />
+          </div>
+          {/* title filter mobile */}
+
           <div className={styles.filter_row}>
             {segmentList.map((segment, index) => (
               <div
@@ -70,13 +105,43 @@ const Filter = ({ models, selectSort, selectFilter, sort, filter }) => {
               </div>
             ))}
           </div>
+          {/* if mobile open menu filter */}
+          {!!isOpen && (
+            <div
+              className={`${styles.filter_options} ${styles.filter_list_none}`}
+            >
+              <ul className={styles.sort_list}>
+                {segmentList.map((segment, index) => (
+                  <li
+                    key={index}
+                    id={segment}
+                    className={styles.sort_list_item}
+                    onClick={(e) => handleFilter(e.target.id)}
+                  >
+                    {segment}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {/* if mobile open menu filter */}
         </div>
         <div className={styles.sort_container}>
           <div className={styles.sort_input} onClick={openSort}>
             <span>
               {sort.value === SORT.EMPTY.value ? SORT.EMPTY.html : sort.html}
             </span>
-            <span className={styles.input_span_icon}>▼</span>
+            <Image
+              src={arrow}
+              alt="arrow"
+              width={8}
+              height={8}
+              className={
+                !!open
+                  ? `${styles.sort_arrow} ${styles.invert_arrow}`
+                  : styles.sort_arrow
+              }
+            />
           </div>
         </div>
         {!!open && (
