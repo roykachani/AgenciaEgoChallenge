@@ -8,6 +8,7 @@
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
+  z-index: 100;
 }
 .menu_container {
   padding-top: 22px;
@@ -61,6 +62,7 @@
   font-weight: 400;
   line-height: 17px;
   color: #191919;
+  user-select: none;
 }
 .about_links {
   width: 100%;
@@ -70,4 +72,14 @@
   background: #efeeef;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .dropDownMenu_layout {
+    z-index: 1;
+    top: 70px;
+  }
+  .menu_container {
+    width: 100%;
+  }
 }

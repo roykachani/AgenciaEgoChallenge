@@ -12,3 +12,14 @@
   align-items: center;
   border-bottom: 1px solid #ccc;
 }
+.footer {
+  height: 50px;
+  background: #000;
+  margin-top: 113px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 80px;
+  }
+}

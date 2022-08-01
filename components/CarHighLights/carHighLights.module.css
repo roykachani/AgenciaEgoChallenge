@@ -11,11 +11,22 @@
 .higthLights_box {
   width: 1140px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 21px;
 }
 .inverter {
   flex-direction: row-reverse;
+}
+.higthLights_title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 135%;
+  letter-spacing: -0.4px;
+}
+.higthLights_name {
+  line-height: 169%;
+  letter-spacing: -0.1px;
 }
 
 .higthLights_info {
@@ -24,4 +35,28 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .higthLights_container {
+    margin-top: 44px;
+    gap: 30px;
+  }
+
+  .higthLights_box {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .higthLights_image {
+    width: 92%;
+  }
+
+  .higthLights_info {
+    width: 345px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

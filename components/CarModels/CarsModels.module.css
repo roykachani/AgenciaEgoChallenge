@@ -65,3 +65,14 @@
 .model_container:hover > .model_btn {
   visibility: visible;
 }
+
+@media screen and (max-width: 768px) {
+  .models_container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
